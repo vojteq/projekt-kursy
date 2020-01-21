@@ -1,2 +1,39 @@
-<p>course-details works!</p>
-<p>{{ course.name }}</p>
+<div class="card mb-3" >
+    <div class="row no-gutters">
+        <div class="col-md-8 d-flex align-items-start flex-column bd-highlight mb-3">
+            <div class="card-body d-flex align-items-start flex-column bd-highlight mb-3">
+                <div class="mb-auto p-2 bd-highlight ">
+                    <div class="p-2">
+                        <h1 class="card-title">{{ course.name }}</h1>
+                        <h4>Ocena: {{ course.sumOfRatings / course.numberOfRatings }}</h4>
+                        <h4>Ilość ECTS: {{ course.ects }}</h4>
+                        <h4>Semestr: {{ course.semester }}</h4>
+                        <h4>Typ zajęć: {{ course.type }}</h4>
+                        <h4>Maksymalna liczba uczestników: {{ course.maxStudents }}</h4>
+                        <h4>Typ zajęć: {{ course.type }}</h4>
+                        <h4>Opis:</h4>
+                        <p>{{ course.description }}</p>
+
+                        <form (ngSubmit)="onSubmitCourse()">
+                            <h4>Oceń kurs</h4>
+                            <input type="number" name="rate" [(ngModel)]="rate" class="form-control">
+                            <input type="submit" value="Oceń" class="btn btn-info">
+                        </form>
+                        
+                    </div>
+                    <!-- <div class="rating">
+                        <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5" (click)="rateCourse(5)">5 stars</label>
+                        <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4" (click)="rateCourse(4)">4 stars</label>
+                        <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3" (click)="rateCourse(3)">3 stars</label>
+                        <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2" (click)="rateCourse(2)">2 stars</label>
+                        <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1" (click)="rateCourse(1)">1 star</label>
+                      </div> -->
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-md-4 d-flex align-items-center flex-column">
+            <img src="{{ course.pictureUrl }}" class="img-thumbnail"/>
+        </div>
+    </div>
+</div>

@@ -16,16 +16,23 @@ export class CourseDetailsComponent implements OnInit {
   // @Input() chosenCourse:Course;
   // @Input() set chosenCourse(chosenCourse: Course){ this.course = chosenCourse}
   course: Course;
+  @Input() rate: number;
 
   constructor(private coursesService:CoursesService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    // this.route.params.pipe(map(params => params['course.name'])).subscribe(course => { this.course = this.coursesService.getCourse(this.courseIndex)})
-    // this.coursesService.getCourse(this.courseIndex).subscribe(course => this.course = course)
+    this.getCourse();
+  }
 
-    // this.coursesService.getCourses().subscribe(courses => this.courses = courses);
-    // this.coursesService.getCourse(this.courses.indexOf(this.chosenCourse)).subscribe(course => this.course = course)
-    this.coursesService.getCourse(this.index).subscribe(course => this.course = course);
+  onSubmitCourse() {
+    this.course.sumOfRatings += this.rate;
+    this.course.numberOfRatings ++;
+  }
+
+  getCourse(): void {
+    const index = +this.route.snapshot.paramMap.get('index');
+    this.coursesService.getCourse(index)
+      .subscribe(course => this.course = course);
   }
 
 }
