@@ -5,14 +5,14 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: "AIzaSyAc4Ke3gp4EOFH0Y1txL_JI-y4tn7HhK5I",
-    authDomain: "wdai-kursy.firebaseapp.com",
-    databaseURL: "https://wdai-kursy.firebaseio.com",
-    projectId: "wdai-kursy",
-    storageBucket: "wdai-kursy.appspot.com",
-    messagingSenderId: "461788892788",
-    appId: "1:461788892788:web:19a370383bc73e5a9a4b21",
-    measurementId: "G-WYQS33NLY1"
+    apiKey: "AIzaSyDPnGXqf0oxDXIqLwQAIOH7G-AixejvnSE",
+    authDomain: "wdai-kursy-74c6f.firebaseapp.com",
+    databaseURL: "https://wdai-kursy-74c6f.firebaseio.com",
+    projectId: "wdai-kursy-74c6f",
+    storageBucket: "wdai-kursy-74c6f.appspot.com",
+    messagingSenderId: "665846423810",
+    appId: "1:665846423810:web:cc976cad90a498d3f5221b",
+    measurementId: "G-NYX1DK8Q2W"
   }
 };
 

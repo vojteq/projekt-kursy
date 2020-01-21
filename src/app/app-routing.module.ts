@@ -4,6 +4,8 @@ import { CourseDetailsComponent } from './components/course-details/course-detai
 import { CoursesComponent } from './components/courses/courses.component';
 import { AppComponent } from './app.component';
 import { CourseComponent } from './components/course/course.component';
+import { LoginComponent } from './components/auth/login/login.component';
+import { RegisterComponent } from './components/auth/register/register.component';
 
 
 const routes: Routes = [
@@ -12,7 +14,7 @@ const routes: Routes = [
   // // { path: 'details/:name', component: CourseDetailsComponent }
   // { path: 'details/:name', component: CourseDetailsComponent }
   {
-    path: 'glowna',
+    path: 'main',
     component: CoursesComponent
   },
   {
@@ -22,6 +24,14 @@ const routes: Routes = [
   {
     path: 'courses/details/:index',
     component: CourseDetailsComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
   }
 ];
 

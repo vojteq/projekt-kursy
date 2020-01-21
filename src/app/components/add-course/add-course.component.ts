@@ -13,7 +13,8 @@ export class AddCourseComponent implements OnInit {
   name: string;
   ects: number;
   semester: number;
-  type: TypeOfClasses;
+  // type: TypeOfClasses;
+  type: string;
   maxStudents: number;
   rating: number;
   numberOfRatings: number;

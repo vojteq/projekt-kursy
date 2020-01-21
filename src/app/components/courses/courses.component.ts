@@ -3,6 +3,7 @@ import { Course } from '../../models/Course';
 // import { TypeOfClasses } from '../../models/TypeOfClasses';
 import { CoursesService } from '../../services/courses.service'
 import { TypeOfClasses } from 'src/app/models/TypeOfClasses';
+import { AuthService } from '../auth/auth.service';
 // import { EventEmitter } from 'protractor';
 // import { emit } from 'cluster';
 
@@ -21,7 +22,7 @@ export class CoursesComponent implements OnInit {
 
   courses: Course[];
   
-  constructor(private coursesService:CoursesService) { }
+  constructor(private coursesService:CoursesService, private authService: AuthService) { }
 
   ngOnInit() {
     // this.courses = this.coursesService.getCourses();

@@ -15,3 +15,7 @@ img {
 .odd {
   background-color: darkgrey;
 }
+
+#aboutCourse {
+  margin: auto;
+}

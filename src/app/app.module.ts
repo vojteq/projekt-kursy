@@ -15,6 +15,8 @@ import { CourseDetailsComponent } from './components/course-details/course-detai
 // import { AngularFireDatabaseModule} from '@angular/fire/database';
 // import { environment } from '../environments/environment';
 
+
+
 import { NameFilterPipe } from './filters/name.filter.pipe';
 import { EctsFilterPipe } from './filters/ects.filter.pipe';
 import { SemesterFilterPipe } from './filters/semester.filter.pipe';
@@ -22,6 +24,13 @@ import { CourseComponent } from './components/course/course.component';
 // import { environment } from 'src/environments/environment';
 
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AngularFireModule} from "@angular/fire";
+import { AngularFireAuthModule} from "@angular/fire/auth";
+import { AngularFirestoreModule} from '@angular/fire/firestore';
+import { AngularFireDatabaseModule} from '@angular/fire/database';
+import { environment } from '../environments/environment';
+import { LoginComponent } from './components/auth/login/login.component';
+import { RegisterComponent } from './components/auth/register/register.component';
 
 
 @NgModule({
@@ -36,17 +45,18 @@ import { CourseComponent } from './components/course/course.component';
     SemesterFilterPipe,
     CourseDetailsComponent,
     CourseComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     // NgbModule,
-
-    // AngularFireModule.initializeApp(environment.firebase),
-    // AngularFireAuthModule,
-    // AngularFirestoreModule,
-    // AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule, // do obsługi autentykacji
+    AngularFirestoreModule, // do obslugi baz danych
+    AngularFireDatabaseModule // do obslugi baz danych
   ],
   providers: [],
   bootstrap: [AppComponent]

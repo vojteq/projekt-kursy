@@ -4,14 +4,15 @@ export class Course {
     name: string;
     ects: number;
     semester: number;
-    type: TypeOfClasses;
+    // type: TypeOfClasses;
+    type: string;
     maxStudents: number;
     numberOfRatings: number;
     sumOfRatings: number;
     pictureUrl: string;
     description: string;
 
-    constructor(name:string, ects:number, semester:number, type:TypeOfClasses, maxStudents:number, numberOfRatings:number, sumOfRatings:number, pictureUrl:string, description:string){
+    constructor(name:string, ects:number, semester:number, type:string, maxStudents:number, numberOfRatings:number, sumOfRatings:number, pictureUrl:string, description:string){
         this.name = name;
         this.ects = ects;
         this.semester = semester;
