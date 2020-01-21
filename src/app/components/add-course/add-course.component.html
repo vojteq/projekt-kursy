@@ -1,63 +1,42 @@
-<form class="form" (ngSubmit)="onSubmit()">
-    <table class="table table-hover">
-        <thead>
-            <tr>
-                <th>Add new course</th>
-            </tr>
-            <tr>
-                <th scope="cole">Name</th>
-                <th scope="cole">ECTS</th>
-                <th scope="cole">Semester</th>
-                <th scope="cole">Type</th>
-                <th scope="cole">Amount of places</th>
-                <th scope="cole">Description</th>
-                <th scope="cole">PictureUrl</th>
-                <th scope="cole">Your rate</th>
-            </tr>
-        </thead>
-        <tr>
-            <td>
-                <input type="text" name="name" [(ngModel)]="name" placeholder="Name" required>
-            </td>
-            <td>
-                <input type="number" name="ects" [(ngModel)]="ects" placeholder="ECTS" required>
-            </td>
-            <td>
-                <select name="semester" [(ngModel)]="semester" required>
-                    <option value="1">&nbsp; &nbsp;1&nbsp;&nbsp;
-                    <option value="2">&nbsp; &nbsp;2&nbsp;&nbsp;
-                    <option value="3">&nbsp; &nbsp;3&nbsp;&nbsp;
-                    <option value="4">&nbsp; &nbsp;4&nbsp;&nbsp;
-                    <option value="5">&nbsp; &nbsp;5&nbsp;&nbsp;
-                </select>
-            </td>
-            <td>
-                <select name="type" [(ngModel)]="type" aria-placeholder="type" required>
-                    <option value ="Lecture">Lecture</option>
-                    <option value ="Practicals">Practicals</option>
-                    <option value ="Laboratory">Laboratory</option>
-                    <option value ="Project">Project</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" name="maxStudents" [(ngModel)]="maxStudents" placeholder="Amount of places" required>
-            </td>
-            <td>
-                <input type="text" name="description" [(ngModel)]="description" placeholder="description" required>
-            </td>
-            <td>
-                <input type="text" name="pictureUrl" [(ngModel)]="pictureUrl" placeholder="pictureUrl" required>
-            </td>
-            <td>
-                <select name="rating" [(ngModel)]="rating" required>
-                    <option value="1">&nbsp; &nbsp;1&nbsp;&nbsp;
-                    <option value="2">&nbsp; &nbsp;2&nbsp;&nbsp;
-                    <option value="3">&nbsp; &nbsp;3&nbsp;&nbsp;
-                    <option value="4">&nbsp; &nbsp;4&nbsp;&nbsp;
-                    <option value="5">&nbsp; &nbsp;5&nbsp;&nbsp;
-                </select>
-                <input type="submit" value="submit" class="btn btn-info">
-            </td>
-        </tr>
-    </table>
+<form  (ngSubmit)="onSubmit()" >
+    <div>
+        <p>Nazwa kursu</p>
+        <input type="text" name="name" [(ngModel)]="name" class="form-control">
+    </div>
+    <div>
+        <p>Ilość punktów ECTS</p>
+        <input type="number" name="ects" [(ngModel)]="ects" class="form-control">
+    </div>
+    <div>
+        <p>Semestr</p>
+        <input type="number" [(ngModel)]="semester" class="form-control">
+    </div>
+    <div>
+        <p>Rodzaj zajęć</p>
+        <select name="type" [(ngModel)]="type" aria-placeholder="type" class="form-control">
+            <option value ="Lecture">Wykład</option>
+            <option value ="Practicals">Ćwiczenia</option>
+            <option value ="Laboratory">Labolatoria</option>
+            <option value ="Project">Projekt</option>
+        </select>
+    </div>
+    <div>
+        <p>Ilość miejsc</p>
+        <input type="number" name="maxStudents" [(ngModel)]="maxStudents" class="form-control">
+    </div>
+    <div>
+        <p>Opis kursu</p>
+        <!-- <input type="text" name="description" [(ngModel)]="description" class="form-control"> -->
+        <textarea type="text" name="description" [(ngModel)]="description" class="form-control" rows="4"></textarea>
+    </div>
+    <div>
+        <p>Link do obrazka</p>
+        <input type="text" name="pictureUrl" [(ngModel)]="pictureUrl" class="form-control">
+    </div>
+    <div>
+        <p>Twoja ocena</p>
+        <input type="number" [(ngModel)]="rating" class="form-control">
+    </div>
+    
+    <input type="submit" value="submit" class="btn btn-info" data-toggle="collapse" data-target="#collapseAdd">
 </form>

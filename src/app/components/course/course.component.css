@@ -1,0 +1,17 @@
+.btn {
+    margin: 10px;
+}
+
+img {
+    max-width: 80%;
+    max-height: 80%;
+    margin: auto;
+}
+
+.even {
+    background-color: lightgrey;
+  }
+  
+.odd {
+  background-color: darkgrey;
+}

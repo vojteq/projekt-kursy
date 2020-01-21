@@ -7,19 +7,22 @@ import { AppComponent } from './app.component';
 import { AddCourseComponent } from './components/add-course/add-course.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { CoursesComponent } from './components/courses/courses.component';
+import { CourseDetailsComponent } from './components/course-details/course-details.component';
 
-import { AngularFireModule} from "@angular/fire";
-import { AngularFireAuthModule} from "@angular/fire/auth";
-import { AngularFirestoreModule} from '@angular/fire/firestore';
-import { AngularFireDatabaseModule} from '@angular/fire/database';
-import { environment } from '../environments/environment';
+// import { AngularFireModule} from "@angular/fire";
+// import { AngularFireAuthModule} from "@angular/fire/auth";
+// import { AngularFirestoreModule} from '@angular/fire/firestore';
+// import { AngularFireDatabaseModule} from '@angular/fire/database';
+// import { environment } from '../environments/environment';
 
 import { NameFilterPipe } from './filters/name.filter.pipe';
 import { EctsFilterPipe } from './filters/ects.filter.pipe';
 import { SemesterFilterPipe } from './filters/semester.filter.pipe';
+import { CourseComponent } from './components/course/course.component';
 // import { environment } from 'src/environments/environment';
 
-// import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +34,8 @@ import { SemesterFilterPipe } from './filters/semester.filter.pipe';
     NameFilterPipe,
     EctsFilterPipe,
     SemesterFilterPipe,
+    CourseDetailsComponent,
+    CourseComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,10 +43,10 @@ import { SemesterFilterPipe } from './filters/semester.filter.pipe';
     FormsModule,
     // NgbModule,
 
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
-    AngularFirestoreModule,
-    AngularFireDatabaseModule,
+    // AngularFireModule.initializeApp(environment.firebase),
+    // AngularFireAuthModule,
+    // AngularFirestoreModule,
+    // AngularFireDatabaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,33 +1,24 @@
-<div id="addSearch">
-    <!-- <button class="btn btn-outline-success">Dodaj kurs</button> -->
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseAdd" aria-expanded="false" aria-controls="collapseAdd">
+    Dodaj kurs
+</button>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseSearch" aria-expanded="false" aria-controls="collapseSearch">
+    Wyszukaj kurs
+</button>
+
+<div class="collapse" id="collapseAdd">
     <app-add-course (addCourse)="addCourse($event)"></app-add-course>
 </div>
-
-<input [(ngModel)]="searchName" placeholder="search by name">
-<input [(ngModel)]="searchEcts" placeholder="search by ECTS">
-<input [(ngModel)]="searchSemester" placeholder="search by semester">
-
-<!-- <div class="card mb-3" *ngFor="let course of courses; let i = index; | nameFilter : searchtext" [ngClass]="setClasses(i)"> -->
-<div class="card mb-3" *ngFor="let course of (courses | nameFilterPipe : searchName | ectsFilterPipe : searchEcts | semesterFilterPipe : searchSemester ); let i = index" [ngClass]="setClasses(i)">
-    <div class="row no-gutters">
-        <div class="col-md-8 d-flex align-items-start flex-column bd-highlight mb-3">
-            <div class="card-body d-flex align-items-start flex-column bd-highlight mb-3">
-                <div class="mb-auto p-2 bd-highlight ">
-                    <!-- <div class="p-2 bd-highlight"> -->
-                    <div class="p-2">
-                        <h1 class="card-title">{{ course.name }}</h1>
-                        <button type="button" class="btn btn-outline-primary" routerLink="/details/{{ course }}">Szczegóły kursu</button>
-                        <button type="button" class="btn btn-outline-danger" (click)="deleteCourse(course)">Usuń kurs</button>
-                    </div>
-                    
-                    <p class="card-text">{{ course.description }}</p>
-                </div>
-                
-            </div>
-        </div>
-        <div class="col-md-4 d-flex align-items-center flex-column">
-            <img src="{{ course.pictureUrl }}" />
-        </div>
-    </div>
+<div class="collapse" id="collapseSearch">
+    <input [(ngModel)]="searchName" placeholder="Nazwa" class="form-control">
+    <input [(ngModel)]="searchEcts" placeholder="ECTS" class="form-control">
+    <input [(ngModel)]="searchSemester" placeholder="Semestr" class="form-control">
 </div>
 
+<div class="container-fluid">
+    <app-course
+        *ngFor="let course of (courses | nameFilterPipe : searchName | ectsFilterPipe : searchEcts | semesterFilterPipe : searchSemester ); let i = index"
+        [course]="course"
+        [index]="i"
+        >
+    </app-course>
+</div>

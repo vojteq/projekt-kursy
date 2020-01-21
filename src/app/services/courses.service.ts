@@ -20,6 +20,10 @@ export class CoursesService {
     return of(COURSES);
   }
 
+  getCourse(index:number) : Observable<Course> {
+    return of(COURSES[index]);
+  }
+
   addCourse(course) {
     COURSES.push(course);
   }

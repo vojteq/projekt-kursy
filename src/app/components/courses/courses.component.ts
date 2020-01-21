@@ -28,14 +28,14 @@ export class CoursesComponent implements OnInit {
     this.coursesService.getCourses().subscribe(courses => this.courses = courses)
   }
 
-  onSubmit(course:Course, rating:number) {
-    // this.course.sumOfRatings += this.rating;
-    course.sumOfRatings += rating;
-    course.numberOfRatings++;
-    // this.courses.splice(this.courses.indexOf(course), 1, course);
-    // course.sumOfRatings = course.sumOfRatings + rate;
-    // course.numberOfRatings = course.numberOfRatings + 1;
-  }
+  // onSubmit(course:Course, rating:number) {
+              // this.course.sumOfRatings += this.rating;
+    // course.sumOfRatings += rating;
+    // course.numberOfRatings++;
+              // this.courses.splice(this.courses.indexOf(course), 1, course);
+              // course.sumOfRatings = course.sumOfRatings + rate;
+              // course.numberOfRatings = course.numberOfRatings + 1;
+  // }
   // onSubmit() {
   //   this.course.sumOfRatings +=this.rating;
   //   this.course.numberOfRatings++;

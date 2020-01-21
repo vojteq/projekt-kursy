@@ -23,3 +23,15 @@ export class Course {
         this.description = description;
     }
 }
+
+// export interface Course {
+//     name: string;
+//     ects: number;
+//     semester: number;
+//     type: TypeOfClasses;
+//     maxStudents: number;
+//     numberOfRatings: number;
+//     sumOfRatings: number;
+//     pictureUrl: string;
+//     description: string;
+// }

@@ -9,5 +9,4 @@ export const COURSES: Course[] = [
     new Course( 'Logika matematyczna', 4, 2, TypeOfClasses.Lecture, 200, 10, 12, 'https://media4.s-nbcnews.com/j/newscms/2018_22/2451826/180601-atomi-mn-1540_f415a90a9f0fcbddc7dfa4cc7b5a36c3.fit-2000w.jpg', 'some description some description' ),
     new Course( "Elektronika", 4, 2, TypeOfClasses.Practicals, 15, 1, 100, 'https://media4.s-nbcnews.com/j/newscms/2018_22/2451826/180601-atomi-mn-1540_f415a90a9f0fcbddc7dfa4cc7b5a36c3.fit-2000w.jpg', 'gówno jakieś' ),
     new Course( 'Programowanie Obiektowe', 3, 3, TypeOfClasses.Lecture, 170, 21, 86, 'https://media4.s-nbcnews.com/j/newscms/2018_22/2451826/180601-atomi-mn-1540_f415a90a9f0fcbddc7dfa4cc7b5a36c3.fit-2000w.jpg', 'wykład z obiektówki taki całkiem oke' )
-    
 ]
